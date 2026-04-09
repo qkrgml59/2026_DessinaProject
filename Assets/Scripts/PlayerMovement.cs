@@ -10,11 +10,11 @@ public class PlayerMovement : MonoBehaviour
     public float minZ = -14f;
     public float maxZ = 14f;
 
-    private PlayerHealth1 playerHealth;
+    private PlayerHealth playerHealth;
 
     private void Start()
     {
-        playerHealth = GetComponent<PlayerHealth1>();
+        playerHealth = GetComponent<PlayerHealth>();
     }
 
 

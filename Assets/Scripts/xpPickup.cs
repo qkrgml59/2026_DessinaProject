@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class d1 : MonoBehaviour
+public class xpPickup : MonoBehaviour
 {
     public int xpAmount = 1;
 
@@ -8,13 +8,14 @@ public class d1 : MonoBehaviour
     {
         if (!other.CompareTag("Player")) return;
 
-        Player playerLevel = other.GetComponent<Player>();
+        PlayerLevel playerLevel = other.GetComponent<PlayerLevel>();
 
         if (playerLevel != null)
         {
-            playerLevel.AddXp(xpAmount);
+            playerLevel.Addxp(xpAmount);
         }
 
         Destroy(gameObject);
+
     }
 }

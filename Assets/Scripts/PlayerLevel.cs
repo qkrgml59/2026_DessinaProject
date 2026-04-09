@@ -3,27 +3,28 @@ using UnityEngine;
 public class PlayerLevel : MonoBehaviour
 {
     public int level = 1;
-    public int currentXp = 0;
+    public int curretXp = 0;
     public int xpToNextLevel = 5;
 
-    public Sh autoShooter;
-
-    public void AddXp(int amount)         //플레이어 경험치 시스템에 경험치 추가
+    public AutoShooter autoShooter;
+    
+    public void Addxp(int amount)
     {
-        currentXp += amount;
+        curretXp += amount;
 
-        Debug.Log("XP: " + currentXp + " / " + xpToNextLevel);
+        Debug.Log("XP: " + curretXp + " / " + xpToNextLevel);
 
-        if (currentXp >= xpToNextLevel)
+        if (curretXp <= xpToNextLevel)
         {
-            LevelUp();
+            LevelUP();
         }
     }
 
-    void LevelUp()
+   
+    void LevelUP()
     {
         level++;
-        currentXp = 0;
+        curretXp = 0;
         xpToNextLevel += 3;
 
         Debug.Log("Level Up! Current Level: " + level);

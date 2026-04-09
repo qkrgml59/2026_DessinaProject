@@ -19,7 +19,7 @@ public class EnemyDamage : MonoBehaviour
 
         if (attackTimer < attackInterval) return;
 
-        PlayerHealth1 playerHealth = other.GetComponent<PlayerHealth1>();
+        PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
 
         if(playerHealth != null)
         {
